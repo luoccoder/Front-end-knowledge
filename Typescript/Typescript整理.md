@@ -14,7 +14,7 @@
 
 ##### 	2. string类型
 
-##### 	3. undefined 未定义(空变量)
+##### 	3. undefined 未定义
 
 ##### 	4. null  空对象
 
