@@ -123,3 +123,27 @@ Promise.prototype.myFinally=function(callback){
   }
 ```
 
+## 3.Promise.all(待优化)
+
+```javascript
+ Promise.myAll=function(promiselist){
+    //返回一个新Promise
+    return new Promise((resolve,reject)=>{
+      //结果数组
+      const result=[];
+      //循环传入的可迭代参数
+      for(let value of promiselist){
+        //
+        Promise.resolve(value).then((res)=>{
+          result[promiselist.indexOf(value)]=res;
+          if(promiselist.indexOf(value)===promiselist.length-1){
+            resolve(result)
+          }
+        },(rea)=>{
+          reject(rea)
+        })      
+      }
+    })
+  }
+```
+
